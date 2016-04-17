@@ -1,0 +1,42 @@
+$lighter-percentage: 80%;
+$light-percentage: 20%;
+$dark-percentage: 17%;
+$darker-percentage: 38%;
+
+// GENERIC COLORS
+$primary-blue: #48B0F7;
+$primary-gray: #637a91;
+$primary-green: #5ECE81;
+$primary-red: #F44336;
+$primary-white: #FFFFFF;
+$primary-black: #000000;
+$primary-yellow: #F8D053;
+$secondary-blue: #3C87BA;
+$secondary-gray: #536a81;
+$secondary-green: #39C061;
+$secondary-red: #a94442;
+$secondary-white: #F6F7F8;
+
+// PALETTE COLORS
+
+// CASE COLORS
+$info-lighter: lighten($primary-blue, $lighter-percentage);
+$info-light: lighten($primary-blue, $light-percentage);
+$info: $primary-blue;
+$info-dark: darken($primary-blue, $dark-percentage);
+$info-darker: darken($primary-blue, $darker-percentage);
+$warning-lighter: lighten($primary-yellow, $lighter-percentage);
+$warning-light: lighten($primary-yellow, $light-percentage);
+$warning: $primary-yellow;
+$warning-dark: darken($primary-yellow, $dark-percentage);
+$warning-darker: darken($primary-yellow, $darker-percentage);
+$success-lighter: lighten($primary-green, $lighter-percentage);
+$success-light: lighten($primary-green, $light-percentage);
+$success: $primary-green;
+$success-dark: darken($primary-green, $dark-percentage);
+$success-darker: darken($primary-green, $darker-percentage);
+$danger-lighter: lighten($primary-red, $lighter-percentage);
+$danger-light: lighten($primary-red, $light-percentage);
+$danger: $primary-red;
+$danger-dark: darken($primary-red, $dark-percentage);
+$danger-darker: darken($primary-red, $darker-percentage);
