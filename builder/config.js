@@ -1,18 +1,29 @@
+'use strict';
+
+// VENDOR LIBS
+let path = require('path');
+
 const config = {
+    //root: __dirname,
     port: 8080,
     scripts: {
-        src: './app/js/**/*.js',
-        dest: './build/js/'
+        src: 'application/index.js',
+        dest: 'dist/js'
     },
     images: {
         src: './app/images/**/*.{jpeg,jpg,png,gif}',
         dest: './build/images/'
     },
     styles: {
-        src: './app/styles/**/*.scss',
-        dest: './build/css/'
+        src: [
+            'sass/main.scss',
+            'components-*/**/*.scss',
+            'application-*/**/*.scss'
+        ],
+        dest: path.join(this.dist + 'css')
     },
-    sourceDir: './app/',
+    src: '',
+    sync: true,
     dist: 'dist',
     testFiles: './__tests__/**/*.{js,jsx}',
     assetExtensions: [
@@ -31,4 +42,4 @@ const config = {
 
 };
 
-export default config;
+module.exports = config;

@@ -1,3 +1,3 @@
-const emptyFunction = function () {};
+const emptyFunction = () => {};
 
-export default emptyFunction;
+module.exports = emptyFunction;

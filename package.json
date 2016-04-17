@@ -17,10 +17,22 @@
   },
   "homepage": "https://github.com/troianoandres/react-boilerplate#readme",
   "dependencies": {
+    "app-module-path": "^1.0.6",
+    "babelify": "^7.2.0",
     "browser-sync": "^2.12.3",
+    "browserify": "^13.0.0",
+    "debowerify": "^1.4.1",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
     "path": "^0.12.7",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   },
   "devDependencies": {
     "del": "^2.2.0"

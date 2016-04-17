@@ -1,12 +1,15 @@
+'use strict';
+
+// VENDOR LIBS
+let path = require('path');
 let browserSync = require('browser-sync');
 let gulp = require('gulp');
 let config = require('builder/config');
-let path = require('path');
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: path.join(config.root, config.dist)
+            baseDir: config.dist
         },
         port: config.port,
         ui: {
