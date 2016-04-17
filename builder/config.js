@@ -17,10 +17,10 @@ const config = {
     styles: {
         src: [
             'sass/main.scss',
-            'components-*/**/*.scss',
-            'application-*/**/*.scss'
+            'components*/**/*.scss',
+            'application/**/*.scss'
         ],
-        dest: path.join(this.dist + 'css')
+        dest: 'dist/css'
     },
     src: '',
     sync: true,

@@ -9,8 +9,7 @@ let browserSync = require('browser-sync');
 let concat = require('gulp-concat');
 let errorHandler = require('builder/helpers/error-handler');
 const config = require('builder/config');
-
-//var cssmin = require('gulp-minify-css');
+const cssmin = require('gulp-minify-css');
 
 gulp.task('sass', function() {
 
@@ -18,9 +17,11 @@ gulp.task('sass', function() {
         .pipe(sass({
             sourceComments: (global.production),
             sourceMap: (global.production) ? false : 'sass',
-            outputStyle: (global.production) ? 'compressed' : 'nested'
+            outputStyle: 'nested'
         }))
+        .pipe(concat('style.css'))
         .on('error', errorHandler)
+        .pipe(gulpif(global.production, cssmin()))
         .pipe(gulp.dest(config.styles.dest))
         .pipe(gulpif(config.sync, browserSync.reload({stream: true})));
 });
