@@ -7,5 +7,7 @@ let runSequence = require('run-sequence');
 gulp.task('default', ['clean'], function(cb) {
     global.production = false;
 
-    return runSequence(['sass', /*'imagemin',*/ 'browserify'/*, 'copyFonts', 'copyIndex', 'copyIcons'*/], 'watch', cb);
+    return runSequence(
+        ['sass', 'html',/*'imagemin',*/ 'browserify'/*, 'copyFonts', 'copyIndex', 'copyIcons'*/], 'watch', cb
+    );
 });

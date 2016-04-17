@@ -52,5 +52,5 @@ let build = function (file) {
 };
 
 gulp.task('browserify', function() {
-    return build('index.js');
+    return build('app.js');
 });
