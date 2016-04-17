@@ -9,7 +9,7 @@ const AJAXUtils = {
                 url: path,
                 method: method,
                 data: data,
-                dataType: 'jsonp'
+                dataType: 'json'
             })
                 .done(resolve)
                 .fail((jqXHR, textStatus) => {
