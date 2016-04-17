@@ -30,8 +30,10 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
+    "jquery": "^2.2.3",
     "path": "^0.12.7",
     "run-sequence": "^1.1.5",
+    "sessionstorage": "0.0.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
