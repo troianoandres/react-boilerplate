@@ -32,6 +32,7 @@
     "gulp-uglify": "^1.5.3",
     "jquery": "^2.2.3",
     "jquery-mockjax": "^2.1.1",
+    "messageformat": "^0.3.1",
     "path": "^0.12.7",
     "run-sequence": "^1.1.5",
     "sessionstorage": "0.0.1",
