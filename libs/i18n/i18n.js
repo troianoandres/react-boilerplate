@@ -4,7 +4,7 @@
 const MessageFormat = require('messageformat');
 
 // APP DATA
-const i18nData = require('application/data/i18n-data');
+const i18nData = require('data/i18n-data');
 
 //TODO: move this variable to a common place across all application
 const language = 'en';

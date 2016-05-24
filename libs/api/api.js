@@ -3,8 +3,10 @@ const _ = require('lodash');
 const path = require('path');
 const SessionStorage = require('sessionstorage');
 
+require('libs/api/fixtures-loader');
+
 // APP LIBS
-const AJAXUtils = require('application/lib/ajax-utils');
+const AJAXUtils = require('libs/api/ajax-utils');
 
 const rootURL = 'http://localhost:2020';
 
