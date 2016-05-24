@@ -3,6 +3,7 @@
 // VENDOR LIBS
 let gulp = require('gulp');
 let gulpif = require('gulp-if');
+let gutil = require('gulp-util');
 let path = require('path');
 let source = require('vinyl-source-stream');
 let sourcemaps = require('gulp-sourcemaps');
@@ -24,12 +25,12 @@ let build = function (file) {
         cache: {},
         packageCache: {},
         fullPaths: true
-    });
+    }).transform("babelify", {presets: ["es2015", "react"]});
 
     let bundle = function () {
         let stream = bundler.bundle();
 
-        console.log('re bund');
+        gutil.log('Bundling...');
 
         return stream.on('error', errorHandler)
             .pipe(source(file))
