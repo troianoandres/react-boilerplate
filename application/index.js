@@ -11,3 +11,4 @@ API.call('/user/login', 'post', {user: '', password: ''}, function (response) {
 
 console.log(i18n('LOGIN'));
 
+router.run(document.getElementById('mount-point'));
