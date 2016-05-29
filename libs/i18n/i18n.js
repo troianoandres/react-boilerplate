@@ -5,13 +5,14 @@ const MessageFormat = require('messageformat');
 
 //TODO: move this variable to a common place across all application
 const language = 'en';
+const config = require('libs/config/global-config');
 
 // APP DATA
 const languages = {
     en: require('i18n-data/en/i18n-data.js'),
     es: require('i18n-data/es/i18n-data.js')
 };
-const i18nData = languages[language];
+const i18nData = languages[config.get('language')];
 
 const mf = new MessageFormat(language);
 
