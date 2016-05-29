@@ -9,8 +9,8 @@ const config = require('libs/config/global-config');
 
 // APP DATA
 const languages = {
-    en: require('i18n-data/en/i18n-data.js'),
-    es: require('i18n-data/es/i18n-data.js')
+    en: require('data-i18n/en/i18n-data.js'),
+    es: require('data-i18n/es/i18n-data.js')
 };
 const i18nData = languages[config.get('language')];
 

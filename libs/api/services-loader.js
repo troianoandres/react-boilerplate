@@ -18,7 +18,7 @@ let fixtures = (function () {
 })();
 
 // FIXTURES
-fixtures.add(require('fixtures/user-fixtures'));
+fixtures.add(require('services/user-service'));
 
 //TODO: move this variable to a common place across all application
 const rootURL = 'http://localhost:2020/';

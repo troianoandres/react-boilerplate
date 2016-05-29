@@ -3,7 +3,7 @@ const _ = require('lodash');
 const path = require('path');
 const SessionStorage = require('sessionstorage');
 
-require('libs/api/fixtures-loader');
+require('libs/api/services-loader');
 
 // APP LIBS
 const AJAXUtils = require('libs/api/ajax-utils');
