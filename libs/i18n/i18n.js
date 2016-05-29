@@ -1,5 +1,3 @@
-'use strict';
-
 // VENDOR LIBS
 const MessageFormat = require('messageformat');
 
