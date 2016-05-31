@@ -2,14 +2,10 @@ const ContainerView = require('../container-view');
 
 const IndexView = require('application/views/index-view');
 
-describe('asd', function () {
+describe('The IndexView', function () {
     let renderer;
 
-    it('asd', function () {
+    it('should ...', function () {
         renderer = utils.render(<ContainerView />, ['div', IndexView], {router: {push: stub()}});
-
-        //console.log(renderer.component);
-
-        expect(true).to.equal(true);
     });
 });
