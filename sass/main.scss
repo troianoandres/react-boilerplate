@@ -1,0 +1,9 @@
+@import "sass/base";
+
+#mount-point {
+    height: 100%;
+}
+
+.clearfix {
+    @include clearfix();
+}
