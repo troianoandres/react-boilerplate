@@ -16,28 +16,18 @@ $grid-columns:              12 !default;
 
 // COLUMNS PADDING
 $grid-gutter-width:         30px !default;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
-//** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
-
-// Small screen / tablet
+// CONTAINER SIZES
 $container-tablet:             (720px + $grid-gutter-width) !default;
-//** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
-
-// Medium screen / desktop
 $container-desktop:            (940px + $grid-gutter-width) !default;
-//** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
-
-// Large screen / wide desktop
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
-//** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
+// SHADOWS
 $shadow-depth-0: 0 2px 0 rgba(0,0,0,0.15);
 $shadow-depth-1: 0 2px 2px rgba(0,0,0,0.25);
 $shadow-depth-2: 0 3px 5px rgba(0,0,0,0.25);
