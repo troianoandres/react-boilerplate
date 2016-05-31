@@ -2,6 +2,9 @@
 const TestUtils = require('react-addons-test-utils');
 const lodash = require('lodash');
 
+// TEST UTILS
+const simulate = require('test-utils/simulate');
+
 const getRenderer = function (context) {
     let contextTypes = {};
     let contextKeys = lodash.keys(context);
@@ -27,7 +30,7 @@ const getRenderer = function (context) {
     return require('test-utils/renderer').forContext(contextTypes);
 };
 
-const scryChildComponent = function (value, index) {
+const getChildComponent = function (value, index) {
 
 };
 
@@ -39,11 +42,13 @@ const utils = {
         renderer.component = renderer.getComponent();
 
         if (lodash.isArray(childComponents)) {
-            lodash.each(childComponents, scryChildComponent, renderer);
+            lodash.each(childComponents, getChildComponent, renderer);
         }
 
         return renderer;
-    }
+    },
+
+    simulate: simulate.generic
 };
 
 
