@@ -1,17 +1,17 @@
 'use strict';
 
 // VENDOR LIBS
-let path = require('path');
+const path = require('path');
 
 const config = {
     //root: __dirname,
     port: 8080,
     scripts: {
         src: 'application/index.js',
-        dest: 'dist/js'
+        dest: 'js'
     },
     images: {
-        src: './app/images/**/*.{jpeg,jpg,png,gif}',
+        src: 'images',
         dest: './build/images/'
     },
     styles: {
@@ -20,7 +20,11 @@ const config = {
             'components*/**/*.scss',
             'application/**/*.scss'
         ],
-        dest: 'dist/css'
+        dest: 'css'
+    },
+    fonts: {
+        src: 'fonts',
+        dest: 'fonts'
     },
     src: '',
     sync: true,

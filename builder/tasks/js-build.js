@@ -1,22 +1,22 @@
 'use strict';
 
 // VENDOR LIBS
-let gulp = require('gulp');
-let gulpif = require('gulp-if');
-let gutil = require('gulp-util');
-let path = require('path');
-let source = require('vinyl-source-stream');
-let sourcemaps = require('gulp-sourcemaps');
-let watchify = require('watchify');
-let browserify = require('browserify');
-let babelify = require('babelify');
-let uglify = require('gulp-uglify');
-let browserSync = require('browser-sync');
-let debowerify = require('debowerify');
-let errorHandler = require('builder/helpers/error-handler');
+const gulp = require('gulp');
+const gulpif = require('gulp-if');
+const gutil = require('gulp-util');
+const path = require('path');
+const source = require('vinyl-source-stream');
+const sourcemaps = require('gulp-sourcemaps');
+const watchify = require('watchify');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync');
+const debowerify = require('debowerify');
+const errorHandler = require('builder/helpers/error-handler');
 const config = require('builder/config');
 
-let build = function (file) {
+const build = function (file) {
     let bundler = browserify({
         entries: [
             path.join(config.src, config.scripts.src)
@@ -36,7 +36,7 @@ let build = function (file) {
             .pipe(source(file))
             .pipe(gulpif(global.production, uglify()))
             .pipe(gulpif(!global.production, sourcemaps.write('./')))
-            .pipe(gulp.dest(config.scripts.dest))
+            .pipe(gulp.dest(path.join(config.dist, config.scripts.dest)))
             .pipe(gulpif(config.sync, browserSync.reload({stream: true})));
     };
 
@@ -52,6 +52,6 @@ let build = function (file) {
     return bundle();
 };
 
-gulp.task('browserify', function() {
+gulp.task('js-build', () => {
     return build('app.js');
 });

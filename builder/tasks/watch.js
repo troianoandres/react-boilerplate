@@ -1,7 +1,7 @@
 'use strict';
 
-let gulp = require('gulp');
-let config = require('builder/config');
+const gulp = require('gulp');
+const config = require('builder/config');
 
 gulp.task('watch', ['browser-sync'], function() {
     gulp.watch(config.styles.src,                 ['sass']);

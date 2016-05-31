@@ -1,7 +1,7 @@
 'use strict';
 
 // VENDOR LIBS
-let notify = require('gulp-notify');
+const notify = require('gulp-notify');
 
 module.exports = function (error) {
 
